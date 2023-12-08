@@ -112,29 +112,31 @@ const HomePage = () => {
 
     const Card = ({ card }) => {
         return (
-            <div key={card.id} className="h-[350px] w-[480px]">
-                <a href="#" className="group block overflow-hidden">
-                    <div className="relative h-[350px] sm:h-[280px]">
-                        <img
-                            src={card.cover[0]}
-                            alt=""
-                            className="absolute inset-0 h-64 w-full rounded-xl shadow-xl object-cover opacity-100 group-hover:opacity-0 transition duration-500 group-hover:scale-105"
-                        />
+            <div className="container mx-auto">
+                <div key={card.id} className="h-[350px] w-[480px]">
+                    <a href="#" className="group block overflow-hidden">
+                        <div className="relative h-[350px] sm:h-[280px]">
+                            <img
+                                src={card.cover[0]}
+                                alt=""
+                                className="absolute inset-0 h-64 w-full rounded-xl shadow-xl object-cover opacity-100 group-hover:opacity-0 transition duration-500 group-hover:scale-105"
+                            />
 
-                        <img
-                            src={card.cover[1]}
-                            alt=""
-                            className="absolute inset-0 h-64 w-full rounded-xl shadow-xl object-cover opacity-0 group-hover:opacity-100 transition duration-500 group-hover:scale-105"
-                        />
-                    </div>
-
-                    <div className="relative">
-                        <div className="mt-1 flex items-center justify-between text-gray-600">
-                            <p className="tracking-wide font-bold text-xl">{card.name}</p>
+                            <img
+                                src={card.cover[1]}
+                                alt=""
+                                className="absolute inset-0 h-64 w-full rounded-xl shadow-xl object-cover opacity-0 group-hover:opacity-100 transition duration-500 group-hover:scale-105"
+                            />
                         </div>
-                        <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4">{card.language}</h3>
-                    </div>
-                </a>
+
+                        <div className="relative">
+                            <div className="mt-1 flex items-center justify-between text-gray-600">
+                                <p className="tracking-wide font-bold text-xl">{card.name}</p>
+                            </div>
+                            <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4">{card.language}</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
 
         );
@@ -172,7 +174,7 @@ const HomePage = () => {
                         </svg>
                     </div>
                     <div className="text-center">
-                        <h1 className="hero-title text-4xl font-bold tracking-tight sm:text-6xl" data-aos="fade-up">Suheer Zahid</h1>
+                        <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="fade-up">Suheer Zahid</h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">
                             Hello, I'm Suheer Zahid, an innovative frontend developer dedicated to crafting user-friendly web pages.
                             I bring creativity and functionality together to deliver an engaging online presence.</p>
@@ -200,28 +202,7 @@ const HomePage = () => {
 
             {/* ------------- SKILLS ------------- */}
             <section id='marquee' className='flex justify-center items-center flex-col pt-20 mb-40 mx-auto text-center' style={{ minHeight: '70vh' }}>
-                {/* <article className='marquee-cont mt-6' style={{ userSelect: 'none' }}>
-                    <div className="wrapper">
-                        <ul className="marquee text-lg cursor-pointer">
-                            <li className='mx-4 font-semibold'>REACT JS</li>
-                            <li className='mx-4 font-semibold'>REDUX TOOLKIT</li>
-                            <li className='mx-4 font-semibold'>JAVASCRIPT</li>
-                            <li className='mx-4 font-semibold'>BOOTSTRAP</li>
-                            <li className='mx-4 font-semibold'>TAILWIND CSS</li>
-                            <li className='mx-4 font-semibold'>CSS3</li>
-                            <li className='mx-4 font-semibold'>HTML5</li>
-                        </ul>
-                        <ul className="marquee2 text-lg cursor-pointer">
-                            <li className='mx-4 font-semibold'>REACT JS</li>
-                            <li className='mx-4 font-semibold'>REDUX TOOLKIT</li>
-                            <li className='mx-4 font-semibold'>JAVASCRIPT</li>
-                            <li className='mx-4 font-semibold'>BOOTSTRAP</li>
-                            <li className='mx-4 font-semibold'>TAILWIND CSS</li>
-                            <li className='mx-4 font-semibold'>CSS3</li>
-                            <li className='mx-4 font-semibold'>HTML5</li>
-                        </ul>
-                    </div>
-                </article> */}
+
                 <h1 className="hero-title title-font pt-12 pb-4 lg:pt-4 text-5xl sm:text-7xl md:text-7xl lg:text-5xl mb-4 font-bold">My Skills</h1>
 
                 <div className="flex justify-center max-w-5xl mx-auto mt-2">
@@ -260,7 +241,7 @@ const HomePage = () => {
             {/* ------------- PROJECTS ------------- */}
             <section id='projects' className='pt-10'>
                 <div className="">
-                    <h1 className="text-4xl ml-10 -mb-20 font-bold tracking-tight text-gray-900 sm:text-4xl">PROJECTS</h1>
+                    <h1 className="text-4xl pl-10 -mb-20 font-bold tracking-tight text-gray-900 sm:text-4xl">PROJECTS</h1>
                     <HorizontalScrollCarousel />
                 </div>
             </section>
@@ -298,13 +279,13 @@ const HomePage = () => {
                     </div>
                     <div className="text-center">
                         <div className="max-w-2xl space-y-3 md:mx-auto">
-                            <h3 className="text-gray-500 font-semibold text-2xl" data-aos="fade-right">
+                            <h3 className="text-gray-500 font-semibold text-2xl" data-aos="fade-in">
                                 About My Self
                             </h3>
                             <p className="text-gray-800 my-4 pt-1 text-4xl font-semibold sm:text-5xl" data-aos="zoom-in">
                                 Frontend React JS Developer
                             </p>
-                            <p className="text-gray-600 pt-4 text-lg" data-aos="fade-left">
+                            <p className="text-gray-600 pt-4 text-lg" data-aos="fade-in">
                                 Hi, I'm Suheer Zahid, a React JS enthusiast crafting practical web solutions. Let's collaborate to bring your vision to life with user-friendly experiences. No fluff, just reliable development tailored to your needs. 🚀
                             </p>
 
