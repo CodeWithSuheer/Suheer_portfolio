@@ -9,16 +9,16 @@ const Contact = () => {
     }, [])
 
 
-    
+
 
 
     return (
         <main className="relative mt-10 py-28" data-aos="fade-up">
             <div className="relative z-10 max-w-screen-xl mx-auto text-gray-900 sm:px-4 md:px-8">
                 <div className="max-w-lg space-y-3 px-4 sm:mx-auto sm:text-center sm:px-0">
-                    <h3 className="text-gray-600 font-semibold">
-                        Contacts
-                    </h3>
+                    {/* <h3 className="text-gray-600 font-semibold">
+                        Contact
+                    </h3> */}
                     <h1 className="hero-title title-font pb-1.5 lg:pt-1 text-5xl sm:text-7xl md:text-7xl lg:text-5xl font-bold">Get In Touch</h1>
                     <p className="text-gray-800">
                         I'd love to hear from you! Please fill out the form below.
