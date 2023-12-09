@@ -285,7 +285,7 @@ const HomePage = () => {
                             <p className="text-gray-800 my-4 pt-1 text-4xl font-semibold sm:text-5xl" data-aos="zoom-in">
                                 Frontend React JS Developer
                             </p>
-                            <p className="text-gray-600 pt-4 text-lg" data-aos="fade-in">
+                            <p className="text-gray-600 pt-4 text-lg" data-aos="zoom-out-up">
                                 Hi, I'm Suheer Zahid, a React JS enthusiast crafting practical web solutions. Let's collaborate to bring your vision to life with user-friendly experiences. No fluff, just reliable development tailored to your needs. 🚀
                             </p>
 
