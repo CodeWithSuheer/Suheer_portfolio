@@ -5,8 +5,14 @@
 }
 
 body {
+    /* background-color: rgb(32, 32, 32); */
     background-color: #fafafa;
     scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #3f3f3f;
+    color: #fff;
 }
 
 

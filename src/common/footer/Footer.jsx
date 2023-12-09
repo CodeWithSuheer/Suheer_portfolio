@@ -45,7 +45,7 @@ const Footer = () => {
 
                             <span class="relative text-sm font-medium text-gray-700 transition-colors group-hover:text-white">Whatsapp Me</span>
                         </Link>
-                        <Link to="/"
+                        <Link
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             class="group relative inline-block overflow-hidden border border-gray-800 px-10 py-2.5 focus:outline-none focus:ring cursor-pointer"
                         >
