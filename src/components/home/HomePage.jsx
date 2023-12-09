@@ -174,12 +174,12 @@ const HomePage = () => {
                         </svg>
                     </div>
                     <div className="text-center">
-                        <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="fade-up">Suheer Zahid</h1>
+                        <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="zoom-out-left">Suheer Zahid</h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">
                             Hello, I'm Suheer Zahid, an innovative frontend developer dedicated to crafting user-friendly web pages.
                             I bring creativity and functionality together to deliver an engaging online presence.</p>
 
-                        <div className="mt-6" data-aos="zoom-in-down">
+                        <div className="mt-6" data-aos="zoom-in-up">
                             <button className="hero_button">
                                 <span><Link
                                     to="marquee"
@@ -241,7 +241,7 @@ const HomePage = () => {
             {/* ------------- PROJECTS ------------- */}
             <section id='projects' className='pt-10'>
                 <div className="">
-                    <h1 className="text-4xl pl-10 -mb-20 font-bold tracking-tight text-gray-900 sm:text-4xl" data-aos="fade-right">PROJECTS</h1>
+                    <h1 className="hero-title text-4xl pl-10 -mb-20 font-bold tracking-tight sm:text-4xl" data-aos="fade-right">PROJECTS</h1>
                     <HorizontalScrollCarousel />
                 </div>
             </section>
