@@ -179,8 +179,8 @@ const HomePage = () => {
                             Hello, I'm Suheer Zahid, an innovative frontend developer dedicated to crafting user-friendly web pages.
                             I bring creativity and functionality together to deliver an engaging online presence.</p>
 
-                        <div className="mt-6" data-aos="fade-left">
-                            <button className="hero_button" data-aos="fade-left">
+                        <div className="mt-6" data-aos="zoom-in-down">
+                            <button className="hero_button">
                                 <span><Link
                                     to="marquee"
                                     spy={true}
@@ -203,7 +203,7 @@ const HomePage = () => {
             {/* ------------- SKILLS ------------- */}
             <section id='marquee' className='flex justify-center items-center flex-col pt-20 mb-40 mx-auto text-center' style={{ minHeight: '70vh' }}>
 
-                <h1 className="hero-title title-font pt-12 pb-4 lg:pt-4 text-5xl sm:text-7xl md:text-7xl lg:text-5xl mb-4 font-bold">My Skills</h1>
+                <h1 className="hero-title title-font pt-12 pb-4 lg:pt-4 text-5xl sm:text-7xl md:text-7xl lg:text-5xl mb-4 font-bold" data-aos="fade-down">My Skills</h1>
 
                 <div className="flex justify-center max-w-5xl mx-auto mt-2">
                     <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
@@ -241,7 +241,7 @@ const HomePage = () => {
             {/* ------------- PROJECTS ------------- */}
             <section id='projects' className='pt-10'>
                 <div className="">
-                    <h1 className="text-4xl pl-10 -mb-20 font-bold tracking-tight text-gray-900 sm:text-4xl">PROJECTS</h1>
+                    <h1 className="text-4xl pl-10 -mb-20 font-bold tracking-tight text-gray-900 sm:text-4xl" data-aos="fade-right">PROJECTS</h1>
                     <HorizontalScrollCarousel />
                 </div>
             </section>
