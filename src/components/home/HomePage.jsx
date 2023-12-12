@@ -4,9 +4,9 @@ import { Link } from 'react-scroll';
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Contact from './Contact';
-import './HomePage.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import './HomePage.css';
 
 // IMAGES
 import social_1 from "../../assets/projects/social_1.png";
@@ -17,7 +17,9 @@ import loja_1 from "../../assets/projects/loja_1.png";
 import loja_2 from "../../assets/projects/loja_2.png";
 import gotrolly_1 from "../../assets/projects/gotrolly_1.png";
 import gotrolly_2 from "../../assets/projects/gotrolly_2.png";
-import Suheer_CV from "../../../Suheer_CV.pdf";
+import Experience from './Experience';
+import About from './About';
+import HeroSection from './HeroSection';
 
 
 
@@ -26,9 +28,17 @@ const cards = [
         id: 1,
         name: 'ELISHA',
         language: 'React JS, Redux Toolkit, Bootstrap',
-        url: "/imgs/abstract/1.jpg",
+        url: "http://178.16.137.184:3000/",
         title: "Title 1",
         cover: [elisha_1, elisha_2]
+    },
+    {
+        id: 4,
+        name: 'Social Swirl LMS',
+        language: 'React JS, Redux Toolkit, Tailwind',
+        url: "https://socialswirl.tech/",
+        title: "Title 4",
+        cover: [social_1, social_2]
     },
     {
         id: 2,
@@ -46,14 +56,7 @@ const cards = [
         title: "Title 3",
         cover: [gotrolly_1, gotrolly_2]
     },
-    {
-        id: 4,
-        name: 'Social Swirl LMS',
-        language: 'React JS, Redux Toolkit, Tailwind',
-        url: "/imgs/abstract/4.jpg",
-        title: "Title 4",
-        cover: [social_1, social_2]
-    },
+
 ];
 
 // fadeInAnimationVariants
@@ -72,15 +75,6 @@ const fadeInAnimationVariants = {
 }
 
 const HomePage = () => {
-
-    const handleResumeDownload = () => {
-        const link = document.createElement('a');
-        link.href = Suheer_CV;
-        link.download = Suheer_CV;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
 
 
     useEffect(() => {
@@ -114,7 +108,7 @@ const HomePage = () => {
         return (
             <div className="container mx-auto">
                 <div key={card.id} className="h-[350px] w-[480px]">
-                    <a href="#" className="group block overflow-hidden">
+                    <a href={card.url} target='_blank' className="group block overflow-hidden">
                         <div className="relative h-[350px] sm:h-[280px]">
                             <img
                                 src={card.cover[0]}
@@ -146,65 +140,14 @@ const HomePage = () => {
         <>
             {/* ------------- HERO SECTION ------------- */}
             <section id="home" className="relative isolate z-0 px-6 pt-10 lg:px-8" style={{ minHeight: '90vh' }}>
-                <div className="relative mx-auto max-w-2xl py-24">
-                    <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
-                        <svg
-                            className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
-                            viewBox="0 0 1155 678"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-                                fillOpacity=".3"
-                                d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-                            />
-                            <defs>
-                                <linearGradient
-                                    id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-                                    x1="1155.49"
-                                    x2="-78.208"
-                                    y1=".177"
-                                    y2="474.645"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop stopColor="#9089FC" />
-                                    <stop offset={1} stopColor="#FF80B5" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div className="text-center">
-                        <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="zoom-out-left">Suheer Zahid</h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">
-                            Hello, I'm Suheer Zahid, an innovative frontend developer dedicated to crafting user-friendly web pages.
-                            I bring creativity and functionality together to deliver an engaging online presence.</p>
-
-                        <div className="mt-6" data-aos="zoom-in-up">
-                            <button className="hero_button">
-                                <span><Link
-                                    to="marquee"
-                                    spy={true}
-                                    smooth={true}
-                                    duration={700}
-                                    type="button"
-                                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer"
-                                >
-                                    SKILLS
-                                </Link></span>
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
+                <HeroSection text="Suheer Zahid" />
             </section>
 
 
 
             {/* ------------- SKILLS ------------- */}
             <section id='marquee' className='flex justify-center items-center flex-col pt-20 mb-40 mx-auto text-center' style={{ minHeight: '70vh' }}>
-
                 <h1 className="hero-title title-font pt-12 pb-4 lg:pt-4 text-5xl sm:text-7xl md:text-7xl lg:text-5xl mb-4 font-bold" data-aos="fade-down">My Skills</h1>
-
                 <div className="flex justify-center max-w-5xl mx-auto mt-2">
                     <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
                         {skillsData.map((skill, index) => (
@@ -224,17 +167,22 @@ const HomePage = () => {
 
                 <button className="project_btn mt-10">
                     <span><Link
-                        to="projects"
+                        to="experience"
                         spy={true}
                         smooth={true}
                         duration={700}
                         type="button"
-                        className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer"
+                        className="cursor-pointer"
                     >
-                        PROJECTS
+                        EXPERIENCE
                     </Link></span>
                 </button>
+            </section>
 
+
+            {/* ------------- EXPERIENCE ------------- */}
+            <section id='experience' className='pt-10'>
+                <Experience />
             </section>
 
 
@@ -249,58 +197,9 @@ const HomePage = () => {
 
 
             {/* ------------- CTA SECTION ------------- */}
-            <section className="relative isolate z-0 px-6 pt-0 mb-16 -mt-14 lg:px-8">
-                <div className="relative mx-auto max-w-2xl py-2">
-                    <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
-                        <svg
-                            className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
-                            viewBox="0 0 1155 678"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-                                fillOpacity=".3"
-                                d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-                            />
-                            <defs>
-                                <linearGradient
-                                    id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-                                    x1="1155.49"
-                                    x2="-78.208"
-                                    y1=".177"
-                                    y2="474.645"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop stopColor="#9089FC" />
-                                    <stop offset={1} stopColor="#FF80B5" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div className="text-center">
-                        <div className="max-w-2xl space-y-3 md:mx-auto">
-                            <h3 className="text-gray-500 font-semibold text-2xl" data-aos="fade-in">
-                                About My Self
-                            </h3>
-                            <p className="text-gray-800 my-4 pt-1 text-4xl font-semibold sm:text-5xl" data-aos="zoom-in">
-                                Frontend React JS Developer
-                            </p>
-                            <p className="text-gray-600 pt-4 text-lg" data-aos="zoom-out-up">
-                                Hi, I'm Suheer Zahid, a React JS enthusiast crafting practical web solutions. Let's collaborate to bring your vision to life with user-friendly experiences. No fluff, just reliable development tailored to your needs. 🚀
-                            </p>
-
-
-                        </div>
-                        <div className="mt-8" data-aos="zoom-out-up">
-                            <button onClick={handleResumeDownload} className="inline-block py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none">
-                                Download My Resume
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
+            <section className="relative isolate z-0 px-6 pt-0 mb-24 -mt-14 lg:px-8">
+                <About text="Frontend React JS Developer" />
             </section>
-
 
             {/* ------------- CONTACT ------------- */}
             <Contact />
