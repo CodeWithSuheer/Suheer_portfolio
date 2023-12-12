@@ -1,8 +1,10 @@
-import React from 'react'
-import AnimatedCursor from "react-animated-cursor"
+import React from 'react';
+import AnimatedCursor from 'react-animated-cursor';
 
 function AnimCursor() {
-    return (
+    const isMobile = window.innerWidth < 600;
+
+    return !isMobile ? (
         <AnimatedCursor
             innerSize={8}
             outerSize={30}
@@ -21,11 +23,10 @@ function AnimCursor() {
                 'select',
                 'textarea',
                 'button',
-                '.link'
+                '.link',
             ]}
-
         />
-    )
+    ) : null;
 }
 
-export default AnimCursor
+export default AnimCursor;

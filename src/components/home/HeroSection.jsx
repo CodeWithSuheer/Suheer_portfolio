@@ -1,39 +1,7 @@
 import React from 'react'
-import { motion } from "framer-motion";
 import { Link } from 'react-scroll';
 
-const HeroSection = ({ text }) => {
-    const letters = Array.from(text);
-    const container = {
-        hidden: { opacity: 0 },
-        visible: (i = 1) => ({
-            opacity: 1,
-            transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
-        }),
-    };
-
-    const child = {
-        visible: {
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: {
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
-            },
-        },
-        hidden: {
-            opacity: 0,
-            x: -20,
-            y: 10,
-            transition: {
-                type: "spring",
-                damping: 12,
-                stiffness: 100,
-            },
-        },
-    };
+const HeroSection = () => {
 
     return (
         <>
@@ -65,21 +33,7 @@ const HeroSection = ({ text }) => {
                     </svg>
                 </div>
                 <div className="text-center">
-                    {/* <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl">Suheer Zahid</h1> */}
-                    <motion.div
-                        style={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', fontSize: '1.5rem' }}
-                        variants={container}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        {letters.map((letter, index) => (
-                            <motion.span className='hero-title text-6xl font-bold tracking-tight sm:text-6xl' variants={child} key={index}>
-                                {letter === " " ? "\u00A0" : letter}
-                            </motion.span>
-                        ))}
-                    </motion.div>
-
-
+                    <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="fade-left">Suheer Zahid</h1>
                     <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">
                         Hello, I'm Suheer Zahid, an innovative frontend developer dedicated to crafting user-friendly web pages.
                         I bring creativity and functionality together to deliver an engaging online presence.</p>
