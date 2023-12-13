@@ -30,7 +30,8 @@ const cards = [
         language: 'React JS, Redux Toolkit, Bootstrap',
         url: "http://178.16.137.184:3000/",
         title: "Title 1",
-        cover: [elisha_1, elisha_2]
+        cover: [elisha_1, elisha_2],
+        status: "Live"
     },
     {
         id: 4,
@@ -38,7 +39,8 @@ const cards = [
         language: 'React JS, Redux Toolkit, Tailwind',
         url: "https://socialswirl.tech/",
         title: "Title 4",
-        cover: [social_1, social_2]
+        cover: [social_1, social_2],
+        status: "Live"
     },
     {
         id: 2,
@@ -46,7 +48,8 @@ const cards = [
         language: 'React JS, Redux Toolkit, Tailwind',
         url: "/imgs/abstract/2.jpg",
         title: "Title 2",
-        cover: [loja_1, loja_2]
+        cover: [loja_1, loja_2],
+        status: "In process for deployment"
     },
     {
         id: 3,
@@ -54,7 +57,8 @@ const cards = [
         language: 'React JS, Redux Toolkit, Tailwind',
         url: "/imgs/abstract/3.jpg",
         title: "Title 3",
-        cover: [gotrolly_1, gotrolly_2]
+        cover: [gotrolly_1, gotrolly_2],
+        status: "In process for deployment"
     },
 
 ];
@@ -127,6 +131,7 @@ const HomePage = () => {
                             <div className="mt-1 flex items-center justify-between text-gray-600">
                                 <p className="tracking-wide font-bold text-xl">{card.name}</p>
                             </div>
+                            <h3 className="text-md font-bold text-gray-500 group-hover:underline group-hover:underline-offset-4">{card.status}</h3>
                             <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4">{card.language}</h3>
                         </div>
                     </a>
@@ -165,44 +170,42 @@ const HomePage = () => {
                     </ul>
                 </div>
 
-                <button className="project_btn mt-10">
-                    <span><Link
-                        to="experience"
-                        spy={true}
-                        smooth={true}
-                        duration={700}
-                        type="button"
-                        className="cursor-pointer"
-                    >
+                <Link to="experience"
+                    spy={true}
+                    smooth={true}
+                    duration={700}
+                    type="button"
+                    className="mt-10 cursor-pointer">
+                    <span className='project_btn'>
                         EXPERIENCE
-                    </Link></span>
-                </button>
-            </section>
+                    </span>
+                </Link >
+            </section >
 
 
             {/* ------------- EXPERIENCE ------------- */}
-            <section id='experience' className='pt-10'>
+            < section id='experience' className='pt-10' >
                 <Experience />
-            </section>
+            </section >
 
 
             {/* ------------- PROJECTS ------------- */}
-            <section id='projects' className='pt-10'>
+            < section id='projects' className='pt-10' >
                 <div className="">
                     <h1 className="hero-title text-4xl pl-10 -mb-20 font-bold tracking-tight sm:text-4xl" data-aos="fade-right">PROJECTS</h1>
                     <HorizontalScrollCarousel />
                 </div>
-            </section>
+            </section >
 
 
 
             {/* ------------- CTA SECTION ------------- */}
-            <section className="relative isolate z-0 px-6 pt-0 mb-24 -mt-14 lg:px-8">
+            < section className="relative isolate z-0 px-6 pt-0 mb-24 -mt-14 lg:px-8" >
                 <About text="Frontend React JS Developer" />
-            </section>
+            </section >
 
             {/* ------------- CONTACT ------------- */}
-            <Contact />
+            < Contact />
         </ >
     )
 }

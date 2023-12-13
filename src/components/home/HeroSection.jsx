@@ -39,18 +39,16 @@ const HeroSection = () => {
                         I bring creativity and functionality together to deliver an engaging online presence.</p>
 
                     <div className="mt-6" data-aos="zoom-in-up">
-                        <button className="hero_button">
-                            <span><Link
-                                to="marquee"
-                                spy={true}
-                                smooth={true}
-                                duration={700}
-                                type="button"
-                                className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer"
-                            >
+                        <Link to="marquee"
+                            spy={true}
+                            smooth={true}
+                            duration={700}
+                            type="button"
+                            className="hero_button focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer">
+                            <span>
                                 SKILLS
-                            </Link></span>
-                        </button>
+                            </span>
+                        </Link >
                     </div>
 
                 </div>

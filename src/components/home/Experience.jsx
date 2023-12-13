@@ -65,18 +65,16 @@ const Experience = () => {
                 </div>
 
                 <div className="flex justify-center mx-auto">
-                    <button className="project_btn mt-12 ">
-                        <span><Link
-                            to="projects"
-                            spy={true}
-                            smooth={true}
-                            duration={700}
-                            type="button"
-                            className="cursor-pointer"
-                        >
+                    <Link to="projects"
+                        spy={true}
+                        smooth={true}
+                        duration={700}
+                        type="button"
+                        className="mt-10 cursor-pointer">
+                        <span className='project_btn'>
                             PROJECTS
-                        </Link></span>
-                    </button>
+                        </span>
+                    </Link >
                 </div>
 
             </div>
