@@ -5,7 +5,7 @@ const HeroSection = () => {
 
     return (
         <>
-            <div className="relative mx-auto max-w-2xl py-24">
+            <div className="relative mx-auto max-w-3xl py-24">
                 <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
                     <svg
                         className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -35,8 +35,9 @@ const HeroSection = () => {
                 <div className="text-center">
                     <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="fade-left">Suheer Zahid</h1>
                     <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">
-                        Hello, I'm Suheer Zahid, an innovative frontend developer dedicated to crafting user-friendly web pages.
-                        I bring creativity and functionality together to deliver an engaging online presence.</p>
+                        A motivated Full Stack Developer with 1+ years of experience, having strong command over
+                        HTML, CSS and JavaScript. Highly experienced in developing websites and web applications with
+                        Bootstrap, Tailwind, React JS and Node JS. 🚀</p>
 
                     <div className="mt-6" data-aos="zoom-in-up">
                         <Link to="marquee"

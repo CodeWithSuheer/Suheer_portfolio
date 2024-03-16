@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-8 py-4 border-t items-center justify-center sm:flex">
-                    <p>© 2023 Suheer Zahid.</p>
+                    <p>© 2024 Suheer Zahid.</p>
 
                 </div>
             </div>

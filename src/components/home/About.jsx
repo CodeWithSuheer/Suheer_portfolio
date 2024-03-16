@@ -10,13 +10,21 @@ const About = ({ text }) => {
     });
     const letters = Array.from(text);
 
-    const handleResumeDownload = () => {
-        const link = document.createElement('a');
-        link.href = Suheer_CV;
-        link.download = Suheer_CV;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+    const handleResumeDownload = async () => {
+        try {
+            const response = await fetch(Suheer_CV);
+            const blob = await response.blob();
+            const url = URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Suheer_CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Error downloading PDF:', error);
+        }
     };
 
     const container = {
@@ -81,7 +89,7 @@ const About = ({ text }) => {
                     </svg>
                 </div>
                 <div className="text-center">
-                    <div className="max-w-2xl space-y-3 md:mx-auto">
+                    <div className="max-w-7xl space-y-3 md:mx-auto">
                         <h3 className="text-gray-500 font-semibold text-2xl" data-aos="fade-in">
                             About My Self
                         </h3>
@@ -89,7 +97,7 @@ const About = ({ text }) => {
                             Frontend React JS Developer
                         </p> */}
                         <motion.div
-                            style={{ overflow: 'hidden', display: 'flex', fontSize: '1.5rem' }}
+                            style={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1.5rem' }}
                             variants={container}
                             initial="hidden"
                             animate={inView ? 'visible' : 'hidden'}
@@ -102,7 +110,10 @@ const About = ({ text }) => {
                         </motion.div>
 
                         <p className="text-gray-600 text-lg" data-aos="zoom-out-up">
-                            Hi, I'm Suheer Zahid, a React JS enthusiast crafting practical web solutions. Let's collaborate to bring your vision to life with user-friendly experiences. No fluff, just reliable development tailored to your needs. 🚀
+                            A motivated Full Stack Developer with 1+ years of experience, having strong command over
+                            HTML, CSS and JavaScript. Highly experienced in developing websites and web applications with
+                            Bootstrap, Tailwind, React JS and Node JS. Adept in developing user interfaces, testing and
+                            debugging applications 🚀
                         </p>
 
 

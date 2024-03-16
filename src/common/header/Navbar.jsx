@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import logo from "../../assets/logo.png";
-import suheer from "../../assets/suheer.png";
+let suheer = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/profile-pic_1.png?v=1710579687";
 
 
 // Profile Dropdown
@@ -20,7 +20,7 @@ const ProfileDropDown = (props) => {
     return (
         <div className={`relative ${props.class}`}>
             <div className="flex items-center space-x-4">
-                <button ref={profileRef} className="w-10 h-10 outline-none rounded-full ring-offset-2 ring-gray-200 ring-2 lg:focus:ring-indigo-600"
+                <button ref={profileRef} className="w-10 h-10 outline-none rounded-full ring-offset-2 ring-gray-200 ring-2 lg:focus:ring-gray-600"
                     onClick={() => setState(!state)}
                 >
                     <img
