@@ -36,7 +36,7 @@ const HeroSection = () => {
                     <h1 className="hero-title text-6xl font-bold tracking-tight sm:text-6xl" data-aos="fade-left">Suheer Zahid</h1>
                     <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-right">
                         A motivated Full Stack Developer with 1+ years of experience, having strong command over
-                        HTML, CSS and JavaScript. Highly experienced in developing websites and web applications with
+                        React, Node JS, Next JS. Highly experienced in developing websites and web applications with
                         Bootstrap, Tailwind, React JS and Node JS. 🚀</p>
 
                     <div className="mt-6" data-aos="zoom-in-up">

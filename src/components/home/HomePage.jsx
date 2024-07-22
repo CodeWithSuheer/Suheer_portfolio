@@ -2,21 +2,22 @@
 import React, { useEffect } from 'react';
 import { useRef } from "react";
 import { Link } from 'react-scroll';
-import Aos from 'aos';
 import { motion, useTransform, useScroll } from "framer-motion";
+import Aos from 'aos';
 import Contact from './Contact';
 import 'aos/dist/aos.css';
 import './HomePage.css';
 
 // IMAGES
-import social_1 from "../../assets/projects/social_1.png";
-import social_2 from "../../assets/projects/social_2.png";
-import elisha_1 from "../../assets/projects/elisha_1.png";
-import elisha_2 from "../../assets/projects/elisha_2.png";
-let it_expert_offical_1 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/IT_Expert_Offical_png.png?v=1710575654";
-let it_expert_offical_2 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/IT_Expert_Offical_2.png?v=1710576095";
-let it_expert_admin_1 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/IT_Expert_Admin.png?v=1710575652";
-let it_expert_admin_2 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/IT_Expert_Admin_2.png?v=1710576075";
+let fyb1 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/fyb1.png?v=1721679067";
+let fyb2 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/fyb2.png?v=1721679066";
+let googly1 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/googly1.png?v=1721679067";
+let googly2 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/googly2.png?v=1721679067";
+let brand1 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/brand1.png?v=1721679067";
+let brand2 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/brand2.png?v=1721679067";
+let ammar1 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/ammar1.png?v=1721682186";
+let ammar2 = "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/ammar2.png?v=1721682186";
+
 import Experience from './Experience';
 import About from './About';
 import HeroSection from './HeroSection';
@@ -25,38 +26,38 @@ import HeroSection from './HeroSection';
 
 const cards = [
     {
-        id: 3,
-        name: 'ELISHA',
-        language: 'React JS, Redux Toolkit, Bootstrap',
-        url: "/imgs/abstract/1.jpg",
-        title: "Title 1",
-        cover: [elisha_1, elisha_2],
-        info: "On deployment Phase"
-    },
-    {
         id: 1,
-        name: 'IT Expert Offical',
-        language: 'React JS, Redux Toolkit, Tailwind',
-        url: "https://itexpertsofficial.com",
-        title: "Title 2",
-        cover: [it_expert_offical_1, it_expert_offical_2]
+        name: 'For Your Beauty',
+        language: 'React, TypeScript, Node JS, Express, Redux Toolkit',
+        url: "https://foryourbeauty.shop",
+        title: "Title 1",
+        cover: [fyb1, fyb2],
     },
     {
         id: 2,
-        name: 'IT Expert Admin Dashboard',
-        language: 'React JS, Redux Toolkit, Tailwind',
-        url: "https://admin.itexpertsofficial.com/adminpanel",
-        title: "Title 3",
-        cover: [it_expert_admin_1, it_expert_admin_2]
+        name: 'Googly Smart',
+        language: 'React JS, Node JS, Express, Redux Toolkit',
+        url: "https://googly-smart.com",
+        title: "Title 1",
+        cover: [googly1, googly2],
     },
-    // {
-    //     id: 4,
-    //     name: 'Social Swirl LMS',
-    //     language: 'React JS, Redux Toolkit, Tailwind',
-    //     url: "/imgs/abstract/4.jpg",
-    //     title: "Title 4",
-    //     cover: [social_1, social_2]
-    // },
+    {
+        id: 3,
+        name: 'The BrandrsCo',
+        language: 'Next JS 14, Tailwind CSS',
+        url: "https://thebrandrsco.com",
+        title: "Title 1",
+        cover: [brand1, brand2],
+    },
+    {
+        id: 4,
+        name: 'Ammar Forte',
+        language: 'Next JS 14, Tailwind CSS',
+        url: "https://www.ammarforte.com",
+        title: "Title 1",
+        cover: [ammar1, ammar2],
+    },
+   
 ];
 
 // fadeInAnimationVariants
@@ -123,8 +124,8 @@ const HomePage = () => {
                             />
                         </div>
 
-                        <div className="relative">
-                            <div className="mt-1 flex items-center justify-between text-gray-600">
+                        <div className="relative pl-2.5">
+                            <div className="mt-0 flex items-center justify-between text-gray-600">
                                 <p className="tracking-wide font-bold text-xl">{card.name}</p>
                             </div>
                             <h3 className="text-md font-bold text-gray-500 group-hover:underline group-hover:underline-offset-4">{card.status}</h3>
